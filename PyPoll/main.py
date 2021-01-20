@@ -23,10 +23,10 @@ with open(electiondata_csv,'r',newline='') as csv_file:
     correyvote = 0
     livote = 0
     otooleyvote = 0
-    khanpercent = 0.00
-    correypercent = 0.00
-    lipercent = 0.00
-    otooleypercent = 0.00
+    khanpercent = 0
+    correypercent = 0
+    lipercent = 0
+    otooleypercent = 0
 
     #for loop to count number of votes, candidates, candidates votes, candidates %, and calculcate winner
     for row in csv_reader:
@@ -62,16 +62,33 @@ with open(electiondata_csv,'r',newline='') as csv_file:
         elif (find_winner == otooleyvote):
             winner = "Otooley"
 
-#
+#output to txt
+output_file = os.path.join('Analysis','electionresults.txt')
+with open(output_file,"w",newline="") as datafile:
+    write = csv.writer(datafile)
+    write.writerows([
+                    ["Election Results"],
+                    ["------------------"],
+                    ["Total Votes: "+ str(total_votes)],
+                    ["------------------"],
+                    ["Khan: "+ str(khanpercent)+"%"+str(khanvote)],
+                    ["Correy: "+ str(correypercent)+"%"+str(correyvote)],
+                    ["Li: "+ str(lipercent)+"%"+str(livote)],
+                    ["Otooley: "+ str(otooleypercent)+"%"+str(otooleyvote)],
+                    ["------------------"],
+                    ["Winner: "+ str(winner)],
+    ])
+
+
 
 #print summary
 print("Election Results")
 print("------------------")
-print(f"Total Votes:{total_votes}")
+print("Total Votes: "+str(total_votes))
 print("------------------")
-print(f"Khan:{str(khanpercent)}% ({str(khanvote)})")
-print(f"Correy: {str(correypercent)}% ({str(correyvote)})")
-print(f"Li: {str(lipercent)}% ({str(livote)})")
-print(f"Otooley: {str(otooleypercent)}% ({str(otooleyvote)})")
+print("Khan: "+ str(khanpercent)+"%"+str(khanvote))
+print("Correy: "+ str(correypercent)+"%"+str(correyvote))
+print("Li: "+ str(lipercent)+"%"+str(livote))
+print("Otooley: "+ str(otooleypercent)+"%"+str(otooleyvote))
 print("------------------")
-print(f"Winner: {winner}")
+print("Winner: "+ str(winner))
