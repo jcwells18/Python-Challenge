@@ -3,6 +3,7 @@ In this python challenge, I created two scripts that analyze two different data 
 
 
 PyBank
+
 This script analyzes financial data set.
 
 
@@ -14,6 +15,7 @@ This script calculates
 This script also exports to a txt file and shows results in terminal. 
 
 PyPoll
+
 This script analyzes an election data set.
 
 This script calculates:
