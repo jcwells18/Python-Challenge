@@ -69,8 +69,8 @@ with open(output_file,"w",newline="") as datafile:
                         ["Total Months:"+ str(num_months)],
                         ["Total:"+ str(total_profit_loss)],
                         ["Average Change:"+str(average_change)],
-                        ["Greatest increase in profits: "+str(max_dif[0])+str(max_dif[1])],
-                        ["Greatest decrease in profits: "+str(min_dif[0])+str(min_dif[1])]
+                        ["Greatest increase in profits: "+str(max_dif[0])+" ($"+str(max_dif[1])+")"],
+                        ["Greatest decrease in profits: "+str(min_dif[0])+" ($"+str(min_dif[1])+")"]
     ])
 
 
@@ -78,9 +78,9 @@ with open(output_file,"w",newline="") as datafile:
 print("Financial Analysis")
 print("------------------")
 print("Total Months:"+ str(num_months))
-print("Total:"+ str(total_profit_loss))
-print("Average Change:"+str(average_change))
-print("Greatest increase in profits: "+str(max_dif[0])+str(max_dif[1]))
-print("Greatest decrease in profits: "+str(min_dif[0])+str(min_dif[1]))
+print("Total:"+"$"+str(total_profit_loss))
+print("Average Change: "+"$"+str(average_change))
+print("Greatest increase in profits: "+str(max_dif[0])+" ($"+str(max_dif[1])+")")
+print("Greatest decrease in profits: "+str(min_dif[0])+" ($"+str(min_dif[1])+")")
 
 
