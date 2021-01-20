@@ -10,7 +10,7 @@ This script analyzes financial data set.
 This script calculates
 - total number of months in dataset
 - total amount of Profit/Loss for the dataset
-- calculcates the greatest increase and decrease dae and amount
+- calculcates the greatest increase and decrease date and amount
 
 This script also exports to a txt file and shows results in terminal. 
 
