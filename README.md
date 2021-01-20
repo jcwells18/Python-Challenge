@@ -16,7 +16,7 @@ This script also exports to a txt file and shows results in terminal.
 
 PyPoll
 
-This script analyzes an election data set.
+This script analyzes election data for a local town.
 
 This script calculates:
 - total number of votes
