@@ -28,7 +28,7 @@ with open(electiondata_csv,'r',newline='') as csv_file:
     lipercent = 0.00
     otooleypercent = 0.00
 
-    #for loop to count number of votes and find candidate
+    #for loop to count number of votes, candidates, candidates votes, candidates %, and calculcate winner
     for row in csv_reader:
         votes.append(row[0])
 
@@ -41,6 +41,7 @@ with open(electiondata_csv,'r',newline='') as csv_file:
             livote = livote + 1
         elif(row[2] == "O'Tooley"):
             otooleyvote = otooleyvote + 1
+
         #calculate total votes
         total_votes = int(len(votes))
 
@@ -50,11 +51,27 @@ with open(electiondata_csv,'r',newline='') as csv_file:
         lipercent = round(livote/total_votes*100)
         otooleypercent = round(otooleyvote/total_votes*100)
 
+        #calculate winner
+        find_winner = max(khanvote,correyvote,livote,otooleyvote)
+        if (find_winner == khanvote):
+            winner = "Khan"
+        elif (find_winner == correyvote):
+            winner = "Correy"
+        elif (find_winner == livote):
+            winner = "Li"
+        elif (find_winner == otooleyvote):
+            winner = "Otooley"
 
+#
 
-#print stats
+#print summary
 print("Election Results")
-print("-----------------")
+print("------------------")
 print(f"Total Votes:{total_votes}")
 print("------------------")
-print(f"Khan:{str(khanpercent)}% {str(khanvote)}")
+print(f"Khan:{str(khanpercent)}% ({str(khanvote)})")
+print(f"Correy: {str(correypercent)}% ({str(correyvote)})")
+print(f"Li: {str(lipercent)}% ({str(livote)})")
+print(f"Otooley: {str(otooleypercent)}% ({str(otooleyvote)})")
+print("------------------")
+print(f"Winner: {winner}")
