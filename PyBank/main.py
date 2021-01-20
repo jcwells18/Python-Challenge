@@ -16,23 +16,28 @@ with open(budgetdata_csv,'r',newline='') as csv_file:
     #read header rows first
     csv_header = next(csv_file)
 
-    #count the number of months
-    num_months = 0
-    for row in csv_file:
-        date.append(row[0])
-        num_months +=1
 
-#greatest increase and decrease
+    #set months and total profit/loss to zero
+    num_months = 0
     total_profit_loss = 0
 
-#total profit loss
-    for n in profit_loss:
-        total_profit_loss += int(n)
-    
+    #for loop to for count of months and total profit/loss
+    for row in csv_reader:
+        date.append(row[0])
+        profit_loss.append(int(row[1]))
+        num_months +=1
+        total_profit_loss = sum(profit_loss)
+        
+
+#calculate avg change
+average_change = (total_profit_loss)/(num_months)
+
 
 
 #print stats
 print("Financial Analysis")
 print("------------------")
 print("Total Months:"+ str(num_months))
-print("Total Revenue:"+ str(total_profit_loss))
+print("Total:"+ str(total_profit_loss))
+print("Average Change:"+str(average_change))
+
