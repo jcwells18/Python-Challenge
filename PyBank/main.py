@@ -59,7 +59,7 @@ with open(budgetdata_csv,'r',newline='') as csv_file:
         #calculate average change
         average_change = round((profit_loss_dif)/(num_months))
 
-#output to CSV
+#output to txt
 output_file = os.path.join('Analysis','financialanalysis.txt')
 with open(output_file,"w",newline="") as datafile:
     write = csv.writer(datafile)
