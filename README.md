@@ -1,5 +1,5 @@
 # Python-Challenge
-In this python challenge, I created two scripts that analyze two different data sets. The two scripts import from csv files and export summary results into a txt file. 
+In this python challenge, I created two scripts that analyze two different data sets. The two scripts import from csv files and export summary results into a txt files. 
 
 
 PyBank
