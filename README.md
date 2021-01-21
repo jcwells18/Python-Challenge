@@ -1,5 +1,5 @@
 # Python-Challenge
-In this python challenge, I created two scripts that analyze two different data sets. The two scripts import from csvs.
+In this python challenge, I created two scripts that analyze two different data sets. The two scripts import from csv files and export summary results into a txt file. 
 
 
 PyBank
@@ -11,8 +11,7 @@ This script calculates
 - total number of months in dataset
 - total amount of Profit/Loss for the dataset
 - calculcates the greatest increase and decrease date and amount
-
-This script also exports to a txt file and shows results in terminal. 
+ 
 
 PyPoll
 
