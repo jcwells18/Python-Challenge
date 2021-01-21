@@ -18,7 +18,6 @@ with open(electiondata_csv,'r',newline='') as csv_file:
     csv_header = next(csv_file)
 
     #set variables
-    num_votes = 0
     khanvote = 0
     correyvote = 0
     livote = 0
